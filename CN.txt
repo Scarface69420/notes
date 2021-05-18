@@ -1,0 +1,113 @@
+Nixon Kurian
+seat no. - T150524278
+
+Commands:-
+ping ( -t) - To ensure that network connection is established, timing information as to the speed of the connection
+netstat
+traceroutre
+nslookup
+
+
+Types of network:-
+LAN,MAN,WAN
+
+
+Cables:-
+UTP(unshielded Twisted Pair)
+STP(shielded Twisted Pair)
+Coaxial Cable
+Optic Fiber cable
+straight-through cable
+cross-over cable
+
+Network Devices:-
+Gateway (all layers)
+Router (Network layer)
+Bridge (Data Link Layer)
+Switch (Data Link Layer)
+Hub (Physical Layer)
+Repeater
+MAC address is divided into two parts 24bits OUI- organizational unique identifier, vendors assigned 24bits
+
+Network Topologies:-
+point-to-point
+Bus
+Star
+Ring
+Tree
+Mesh
+Hybrid
+
+
+CRC
+Check-sum
+Hamming code
+
+
+Flow Control :- Sender and reciever should have the same speed 
+1. Stop and wait - sends one frame waits for ack
+2. Sliding Window - sends no. of frames then wait for ack
+
+Error Control :- Loss of data or corrupted dataframe (Positive ACK , Negative ACK)
+1. Stop and Wait ARQ - sends one frame waits a certain amount of time within which ack should be received
+2. Go Back N ARQ - sends a set of frame in the window, but if NACK is recieved the whole set is retransmitted
+3. Selective repeat ARQ - same as go back n but if nack is recieved only the frame for which it was recieved is retransmitted
+
+
+IP address
+Network mask
+Subnetting 
+CIDR (Classless InterDomain Routing)
+
+
+IP Header:
+Version
+IHL- Header length
+DSCP -
+Total lenght - length of entire IP packet
+Identification - incase of fragmentation of packet
+Flags - 
+Fragment Offset - gives exact position of fragment in the packet
+TTL
+Protocol
+Header checksum
+source addr
+dest addr
+options
+
+TCP header: almost same as IP header
+
+UDP Header:
+Source port no
+Dest port no
+Length of data
+UDP checksum
+
+
+DNS
+DHCP
+
+
+RIP
+OSPF
+BGP
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,149 @@
+SQL Queries:
+
+CREATE DATABSE database_name;
+
+USE database_name;
+
+CREATE TABLE table_name (
+	col_name type,
+	col_name type
+);
+
+ALTER TABLE table_name ADD col_name type;
+
+DROP TABLE table_name;
+
+INSERT INTO table_name (col_name) VALUES (value);
+
+SELECT * FROM table_name; or to limit result just add table_name LIMIT 3,4,5;
+
+SELECT * FROM table_name ORDER BY col_name;  add DESC as prefix to order in descending order
+
+To get unique rows : SELECT DISTINCT col_name FROM table_name;
+
+UPDATE table_name SET col_name = value; will update all the rows in the col_name so use WHERE clause
+
+SELECT * FROM table_name WHERE condt. ;
+
+For string
+SELECT * FROM table_name WHERE name LIKE '_abc%';  % - multiple characters,  _ - single character
+
+DELETE FROM table_name; will delete every single row so use WHERE clause
+
+
+* JOINS:
+
+SELECT * FROM table_name1 JOIN table_name2 ON table_name1.col = table_name2.col;
+
+INNER JOIN , LEFT JOIN , RIGHT JOIN
+
+AGGREGATE FUNCTIONS:
+
+AVG()
+SUM()
+COUNT()
+
+
+GROUP BY has HAVING; to filter the result
+
+
+
+
+
+MongoDB
+
+Document (ROW) - A record in mongodb is a document, which is a data structure composed of fields and values pair. 
+Mongodb documents are similar to JSON object.
+Collection (TABLE) - Documents are stored in collection. Documents that are stored in a collection must have an unique_id field.
+However documents do not need to share the same schema.
+Database (DATABASE) - A mongo database is made up of one or many collections. Each database gets its own set of files on the file sys.
+
+Documents are aggregated in tree-like structures.
+
+Queries:
+
+show dbs : will show all databases
+
+use database_name : if database_name doesn't exist it'll create the database
+
+db : will show the current db you are working in
+
+db.createCollection("collection_name"); - will create a collection
+
+show collections : will show all collections in the current database
+
+db.collection_name.drop(); - will drop the collection_name
+
+db.dropDatabase(); - will drop the database
+
+db.collection_name.insert({name: "Anna", age: 32, isBuyer: false}); - will insert a document
+
+db.collection_name.insert([{name: "Silvia", age:28, isBuyer: false},
+			   {name: "Chris", age:32, isBuyer: true}]);
+
+db.collection_name.find({});  - will display all documents add .pretty(); to make it look beautiful and readable
+
+db.collection_name.find({}, {name:1, _id:0});  - will display only name. (1 - true/show, 0 - false/don't show)
+
+db.collection_name.find({}).count();  - will give the number of entries/documents
+
+
+Filter and Search
+
+db.collection_name.find({name: "Anna"});  - will display the document where name = Anna
+
+db.collection_name.find({age: {$lt: 30}}); - display documents where age is less than 30 
+lt - less than , gt - greater than
+
+db.collection_name.find({name: /a/}); - display documents that have a in their name
+/^ / - starts with
+
+db.collection_name.find({}).sort({age: 1});  - (1 - in ascending , -1 - in descending)
+
+
+Update Documents:
+
+db.collection_name.update({_id:ObjectId(kdjbvjs824sjdnf)}, {$set:{name:"Claudia"}});  - will update name 
+to update more than one add {multi: true}
+
+
+Delete Documents:
+
+db.collection_name.remove({ param });
+
+
+
+SQL vs NoSQL
+
+SQL:
+Data uses Schemas
+Relations!
+Data is distributed across multiple tables
+Horizontal scaling(Adding more servers) is difficult/impossible, Vertical scaling(Improving server capacity) is possible
+
+NpSQL:
+Schema-Less
+No Relations
+Data is typically merged/ nested in a few collections
+Both vertical and horizontal scaling is possible
+Great performance for mass(simple) read&write requests
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
