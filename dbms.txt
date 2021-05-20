@@ -1,3 +1,139 @@
+Nixon Kurian
+Seat no: T150524278
+
+Questions:
+
+1. Syntax of create View
+   -> CREATE VIEW view_name AS SELECT columns FROM tables [WHERE optional];
+
+2. Difference between structured and unstructured
+   -> Structured has schema and Unstructured doesn't have schema
+   -> Strucutured is good for Relational data and Unstructured is not good
+   -> Structured is not flexible and Unstructured is Flexible
+
+3. Languages used in sql
+   -> DDL (CREATE DROP ALTER TRUNCATE RENAME), DML (INSERT UPDATE DELETE), 
+      DCL(control language, GRANT REVOKE), DQL(SELECT), TCL(COMMIT ROLLBACK SAVE POINT)
+
+4. Difference between primary and unique key
+   -> Primary - unique identidier for the row , Unique - unique identifier for row which isn't primary
+   -> Primary - cannot accept NULL , Unique -Can accept one NULL
+   -> Primary - only one primary key, unique - can have many unique key
+   -> Primary - creates clustered index, unique - creates non-clustered index
+
+5. Syntax of ALTER command
+   -> ALTER TABLE table_name 1. Add new column 2. Modify column 3. DROP COLUMN 4. RENAME COLUMN(CHANGE col)/ TABLE
+
+6. Parallel and Distributed Database
+   -> The Distributed processing is centralized database that can be accessed over a computer network by different sites. 
+   -> A parallel DBMS is a DBMS that run accross multiple processor and is designed to execute operations in parallel, whenever possible. 
+      Parallel (Shared Memory, Shared Disk and Shared Nothing)
+
+7. DML commands
+   -> INSERT DELETE UPDATE
+
+8. ACID property and what does it ensures
+   -> Atomicity - The entire transaction takes place at once or doesn't happen at all
+   -> Consistency - The db must be consistent before and after the transaction.
+   -> Isolation - Multiple transactions occur independently without interference
+   -> Durabilty - The changes of a successful transaction occurs even if the system failure occurs
+   -> It ensures integrity and consistency
+
+9. Transaction
+   -> Transaction group a set of task into single execution unit. Either Success or Failure refer to ACID property
+
+10. Syntax of UPDATE query
+    -> UPDATE table_name SET col_name = value WHERE clause
+
+11. Add column after specific column in mysql
+    -> ALTER TABLE table_name ADD new_col AFTER specified_col;
+
+12. What is the first field in collection of mongodb created automatically
+    -> _id field (unique index)
+
+13. How many no. of bits are present in the id field in mongodb
+    -> 12 byte binary value represented as 24 character hex string
+
+14. What are indexes
+    -> It is used to add index to a database 
+
+15. What is clustered index
+    -> Clustered indexes sort and store the data rows in the table or view based on their key values. 
+
+16. Difference between triggered and stored procedure
+    -> trigger is a stored procedure that runs automatically when various events happen (eg update, insert, delete)
+    -> Stored procedures are a pieces of the code in written in PL/SQL to do some specific task
+
+17. What is syntax of joining table condition required for joining table
+    -> SELECT * FROM table_name JOIN table_name ON col = col;
+    -> condition : A join condition involves columns that relate two tables in some logical way.
+
+18. Types of database
+    -> Relational DB, NoSQL DB, Centralized DB, Distributed DB, Cloud DB
+
+19. Commands in TCL
+    -> COMMIT, ROLLBACK, SAVE POINT
+
+20. Difference between super and candidate key
+    -> Super Key is an attribute that is used to uniquely identifies all attributes in a relation.
+    -> Candidate is a proper subset of a super key
+
+21. What is view and what are its uses
+    -> A view is a virtual or logical table that allows to view or manipulate parts of the tables.
+    -> Views can join and simplify multiple tables into a single virtual table. Views can act as aggregated tables, 
+   where the database engine aggregates data (sum, average, etc.) and presents the calculated results as part of the data.
+
+22. Query to display duplicate values
+    -> use GROUP BY and COUNT in HAVING;
+
+23. Difference between ddl and dml
+    -> DDL - It is used to create database schema and can be used to define some constraints as well.
+    -> DML - It is used to add, retrieve or update the data.
+
+24. How to connect db in java.
+    ->  1. Regiter the JDBC Driver class
+	2. Get connection
+	3. Create statement
+	4. Execute Queries
+	5. Close connection
+
+25. Types of sql commands 
+
+26. Normal form 
+    -> Normalization is the process of organizing the data in the database.
+    -> 1NF - it should contain atomic value and removes multiple-values
+    -> 2NF - should be in 1NF and removes partial dependency
+    -> 3NF - should be in 2NF and removes transitional dependency
+    -> BCNF - should be in 3NF, and for every FD, LHS is super key.
+
+27. JDBC steps
+28. Facebook uses which type of database
+    -> NoSQL
+
+29. Difference between clustered and Non clustered Index
+
+30. What is equi-join?
+    -> equi-join: the records that match both the tables
+
+
+
+
+
+
+
+
+CAP Theorem :
+Consistency
+Availablity
+Partition Tolerance
+
+
+BASE:
+Basically Available : available all the time according to CAP theorem
+Soft State: Even without input system might change
+Eventaul consistency: system is consistent
+
+
 SQL Queries:
 
 CREATE DATABSE database_name;
@@ -93,7 +229,7 @@ Filter and Search
 db.collection_name.find({name: "Anna"});  - will display the document where name = Anna
 
 db.collection_name.find({age: {$lt: 30}}); - display documents where age is less than 30 
-lt - less than , gt - greater than
+lt - less than , gt - greater than , lte - less than or equal, gte - greater than or equal 
 
 db.collection_name.find({name: /a/}); - display documents that have a in their name
 /^ / - starts with
@@ -127,6 +263,50 @@ No Relations
 Data is typically merged/ nested in a few collections
 Both vertical and horizontal scaling is possible
 Great performance for mass(simple) read&write requests
+
+
+
+JDBC :
+
+JDBC Drivers:
+4 types:
+1. JDBC-ODBC bridge driver
+2. Native-API driver (partially java driver)
+3. Network Protocol driver (Fully java driver) (client-server-database)
+4. Thin driver (fully java driver)
+
+5 steps to connect java to database using JDBC:
+
+1. Regiter the JDBC Driver class
+2. Get connection
+3. Create statement
+4. Execute Queries
+5. Close connection
+
+Example :
+
+import java.sql.*;
+class __ {
+public static void main(Sting args[]) {
+
+//step 1: Load the driver class
+Class.forName('driverclass.jdbc.driver');
+
+//step 2: create the connection object
+Connection con = DriverManager.getConnection("something.something:localhost");
+
+//step 3: create the statement object
+Statement stmt = con.createStatement();
+
+//step 4: execute the query
+ResultSet rs = stmt.executeQuery("select * from table_name");
+
+//step 5: close connection
+con.close();
+
+}
+}
+
 
 
 
