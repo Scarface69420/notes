@@ -1,0 +1,138 @@
+Seat no. - BCO77D511
+PRN no. - 71915777D
+exam Laboratory Practice I
+
+Types of Data
+
+1. Nominal :- Categorical data (not numeric), has no scale and cannot be arranged, 
+eg. Nationality, Gender
+
+2. Ordinal :- Like categorical data eg. rate from (1 to 10)
+
+3.Continuous
+4. Binary
+5. useless - eg. Bank account number. There's no relation, has high cardinality
+
+Decomposition:
+The process of splitting the computations in a problem into a set of
+concurrent tasks is referred to as decomposition.
+
+Types of decomposition techniques in parallel computing:
+
+1. Recursion - Divide and conquer
+
+2. Data decomposition - matrix multiplication
+
+3. Exploratory decomposition -  puzzle problem
+
+4. Speculatory decomposition - switch case
+
+
+Implicit vs Explicit parallelism 
+
+if you decompose your work into tasks and coordinate between them then it’s explicit parallelism because you are the one doing it.
+
+On the other hand, if the system (the libraries, compiler, OS) is doing it for you then it’s implicit parallelism.
+
+
+
+K-means clustering represents an unsupervised algorithm, mainly used for clustering, while KNN is a supervised learning algorithm used for classification
+
+
+
+CUDA - Compute Unified Device Architecture
+supports us by using shared memory, threads and sync
+
+CPU(Cuda libraries, runtime, driver) or GPU
+
+
+Linear regression and Logistic regression
+- Relation between dependent and independent variable
+
+Apriori algorithm 
+- To find association between the items 
+- We use the frequency of the itemset
+- Support and Confidence
+- min support and threshold confidence
+
+
+K-means clustering 
+- Eucledian distance
+- calculate new centroid once you find the new element in a cluster
+
+Decision tree
+- Information Gain, Entropy and Gain = IG - E(element)
+Skewed Probability Distribution (unsurprising): Low entropy
+Balanced Probability Distribution (surprising): High entropy
+
+Naive Bayes Classifier Algorithm 
+- formula P(A|B) = P(B|A)*P(A)/P(B)
+
+
+4 V's of Big data:
+Volume
+Velocity
+Veracity
+Variety
+
+
+Data visualization techniques:
+1. Data V (Table, Pie, charts, histogram)
+2. Information V (Timeline, venn diagram, scatterplot)
+3. Concept V (mindmap, decision tree)
+
+
+Confusion Matrix
+				Predicted
+			NO		YES
+	A			|
+	c	NO	TN	|	FP
+	t			|
+	u	-------------------------------------
+	a			|
+	l	YES	FN	|	TP
+				|
+
+Accuracy = (TP + TN) / Total
+
+Error rate = 1 - accuracy
+
+Precision = TP / Predicted yes
+
+Recall = TP / Actual yes
+
+False Positive is also known as TYPE 1 error
+False Negative is also known as TYPE 2 error
+
+- Actual and Predicted values (difference between them)
+
+
+
+Components of Expert systems(Domain specific):
+- Knowledge base
+- Inference Engine
+- User Interface
+
+
+
+Hadoop architecture:
+- Distributed processing - MapReduce
+- Distributed storage - HDFS
+- YARN Framework - Job scheduling and resource management
+
+MapReduce:
+- Map() - breaks the data into tuples of key value and passes them to reduce
+- Reduce() - gathers all the data according to the key and produces the output
+
+HDFS: Data comes in blocks (64mb)
+- Name Node - contains the meta data, also distributes them manages the resources
+- Data Node - 
+
+
+
+
+
+
+
+
+

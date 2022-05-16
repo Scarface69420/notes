@@ -1,0 +1,83 @@
+Seat no. - BCO77D511
+PRN no. - 71915777D
+
+
+Module.assert
+D:/BE Project/src/util_base.ts:108
+assertShapesMatchAllowUndefinedSize
+D:/src/executor/tensor_utils.ts:28
+  25 | }
+  26 | export function shapesEqualAllowUndefinedSize(n1, n2) {
+  27 |     if (n1.length !== n2.length) {
+> 28 |         return false;
+  29 |     }
+  30 |     for (let i = 0; i < n1.length; i++) {
+  31 |         if (n1[i] !== -1 && n2[i] !== -1 && n1[i] !== n2[i]) {
+
+
+
+2. Interface: Nixon > Interfaces > INT_EMPLOYEE_DETAILS , target table is stored in 44_ODI Trg_odi_trg > EMPLOYEE_DETAILS_NIXON
+
+3. Interface: Nixon > Interfaces > INT_File_to_Oracle_Locations , target table is stored in 44_ODI Trg_odi_trg > LOCATIONS_NIXON
+
+4. Interface: Nixon > Interfaces > INT_Oracle_to_Oracle_sales_data , target table is stored in 44_ODI Trg_odi_trg > EBS_SALES_DATA_NIXON
+
+5. Interface: Nixon > Interfaces > INT_LATEST_USERINFO , target table is stored in 44_ODI Trg_hr > LATESTUSERINFO_NIXON
+
+6. Procedure: Nixon > Procedures > SRC_SALES_NIXON
+
+python Tensorflow/models/research/object_detection/model_main_tf2.py --model_dir=Tensorflow/workspace/models/my_ssd_mobnet --pipeline_config_path=Tensorflow/workspace/models/my_ssd_mobnet/pipeline.config --num_train_steps=5000
+
+https://tensorflow-object-detection-api-tutorial.readthedocs.io/en/latest/install.html#
+
+conda install libpython m2w64-toolchain -c msys2
+
+
+
+https://cybergeeksquad.co/2021/11/hill-sequence-hillseq-solution.html
+
+
+# cook your dish here
+import sys
+#import random
+from bisect import bisect_left as lb
+from bisect import bisect_right as rb
+from collections import deque
+#sys.setrecursionlimit(10**8)
+from queue import PriorityQueue as pq
+from math import gcd
+input_ = lambda: sys.stdin.readline().strip("\r\n")
+ii = lambda : int(input_())
+il = lambda : list(map(int, input_().split()))
+ilf = lambda : list(map(float, input_().split()))
+lii = lambda : list(map(int, list(ip())))
+ip = lambda : input_()
+fi = lambda : float(input_())
+ap = lambda ab,bc,cd : ab[bc].append(cd)
+li = lambda : list(input_())
+pr = lambda x : print(x)
+prinT = lambda x : print(x)
+f = lambda : sys.stdout.flush()
+inv =lambda x:pow(x,mod-2,mod)
+mod = 10**9 + 7
+mod1 = 998244353
+
+for _ in range (ii()) :
+    n = ii()
+    a = il()
+
+    b = [i for i in range(n)]
+
+    ans = [0 for i in range (n)]
+
+    c = [[a[i],i] for i in range (n)]
+
+    c.sort()
+
+    for i in range (n) :
+        x = b[c[i][0] - 1]
+        ans[c[i][1]] = max(0,x)
+
+        b[c[i][0] - 1] = b[max(0, x - 1)]
+
+    print(*ans)

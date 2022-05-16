@@ -1,0 +1,175 @@
+Seat no. - BCO77D511
+PRN no. - 71915777D
+exam Laboratory Practice II
+
+
+KDD method (Knowledge discovery from data):
+- You need a data source
+- Data cleaning
+- Data Integration
+- Stored into data warehouse
+- Data selection
+- Data transformation
+- Data mining
+- Pattern evaluation
+- Knowledge representation
+
+
+Types of Attributes:
+- Nominal : Represents name, categorical representation, eg. haircolor
+- Ordinal : some sort of order or ranking, eg. drink size
+- Binary : True false, 0 1, Symmetric and asymmetric	
+- Numeric : Quantitative, measurable : Interval scaled(linear) and ratio-scaled(non-linear)
+
+
+Data cleaning:
+Parsing -> Correcting -> Standardizing -> Matching -> Consolidation -> dealing with missing data
+-> dealing with incorrect or noisy data
+
+
+Dealing with Missing Values
+- Ignore the tuple(row)
+- Fill manually 
+- Use global constant (NULL/NA)
+- Use attribute mean/median
+ 	 Mean: normal distribution
+    	 Median: skewed distribution (asymmetric)
+- Use of data mining algorithms (inference tools, clustering algo, decision tree)
+
+
+Dealing with noisy data:
+Binning method
+- Equal partitioned Bin
+- Bin mean
+- Bin boundaries
+
+
+Min-Max Normalization
+
+	Vi` = (Vi - mina) / (maxa - mina) x [newmax - newmin] + newmin
+
+
+Z-score normalization
+  I) Using standard deviation (
+	Vi` = (Vi - mean of attribute)/standard deviation
+
+  II) Using mean absolute deviation (more robust to outliers)
+	Sa = 1/n x (|v1 - mean| + .... )
+
+	Vi` = (Vi - mean of attribute) / Sa
+
+
+Decimal Scaling Normalization
+  
+
+OLTP vs OLAP
+
+
+OLAP operations
+1. Roll up/drill up - street>city>state>country (specialization to generalization)
+2. Drill down - day<month<quarter<year (generalized to specialized)
+Selection technique(slice and dice)
+3. Slice - criteria : select one dimension at a time, then create subcube
+4. Dice - criteria : select two or more dimension, those will be in the subcube
+
+
+
+
+
+
+
+
+
+
+
+Confusion Matrix
+				Predicted
+			NO		YES
+	A			|
+	c	NO	TN	|	FP
+	t			|
+	u	-------------------------------------
+	a			|
+	l	YES	FN	|	TP
+				|
+
+Accuracy = (TP + TN) / Total
+
+Error rate = 1 - accuracy
+
+Precision = TP / Predicted yes
+
+Recall = TP / Actual yes
+
+False Positive is also known as TYPE 1 error
+False Negative is also known as TYPE 2 error
+
+- Actual and Predicted values (difference between them)
+
+
+Stemming and lammetization:
+- stemming cuts down the common prefix or suffix 
+- lammetization uses different approach needs the detailed dictionary 
+
+
+
+
+
+STQA
+
+
+Black-box testing - no knowledge of interior working or architecture, no access to code
+White-box testing - has full knowledge, has access to code
+Grey-box testing - has limited knowledge
+
+
+Manual testing
+- testing without any automated tools or scripts
+- different stages: unit testing, integration testing, system testing and user acceptance testing
+
+
+Automated testing
+- tester writes scripts and uses another testing software
+- involves automation of manual process
+- Apart from regression testing, automation testing is also used to test the application from load, performance, and stress point of view
+
+
+
+Functional testing 
+- Unit testing 
+- Integration testing
+- System testing (the whole application is tested)
+- Acceptance testing (QA, to make sure it meets the requirement)
+- Regression testing (after bug fix or change in code)
+- Alpha testing (unit, integration, system)
+- Beta testing (sample of intended audience test application)
+
+
+Non-Functional testing (performance, security, ui)
+- Performance testing(load and stress testing)
+- Usability testing
+- Security testing
+
+
+Verification is the process of checking that a software achieves its goal without any bugs. It is the process to ensure whether the product that is developed is right or not. It verifies whether the developed product fulfills the requirements that we have. Verification is static testing. 
+
+Validation is the process of checking whether the software product is up to the mark or in other words product has high level requirements. It is the process of checking the validation of product i.e. it checks what we are developing is the right product. it is validation of actual and expected product. Validation is the dynamic testing. 
+
+
+Deming chain: It is a way of improving the quality of the application
+- Plan
+- Do
+- Study/check
+- Act
+
+
+
+
+
+
+
+
+
+
+
+

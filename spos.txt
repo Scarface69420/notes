@@ -1,0 +1,102 @@
+BE Seat no. - BCO77D511
+
+TE Seat no. - T150524278
+
+ So can select on HR.COUNTRIES, HR.DEPARTMENTS, HR.EMPLOYEES, HR.JOB_HISTORY,
+ HR.JOBS, HR.LOCATIONS, HR.REGIONS.
+
+
+Compiler Design
+
+1. Lexical Analysis
+2. Parser
+3. 
+4. 
+5. 
+
+* Lexical Analysis : Lexer, Tokenizer, Scanner - we use DFA NFA to convert it to tokens
+Identifiers are stored in the symbol table
+1. Tokenization
+identifier- stored by programmer, variable
+seperator - brackets or punctuations
+keyword - int main , if, while, etc
+operators - < > + =
+constants(literals) - numbers
+special characters - 
+
+2. give error messages
+
+3. eliminate
+
+* Parser:
+first() & follow()
+
+
+* Syntax Analysis : Parser - checks if it is organized syntactically: converts into parse tree
+
+* Semantic Analysis : Check logical errors SDT(Syntax directory translation)
+
+* Intermediate code generator: 3 address code : generates machine independent code
+
+
+
+Questions:
+
+1. Name system tools:
+-> Compilers, assembler, interpreter, scheduler, loaders and linkers.
+
+2. Realtime OS?
+-> A real time operating system time interval to process and respond to inputs is very small.
+Example military software system, space software system.
+
+
+3. Process scheduling?
+-> The allocation of computer's processor power to specific tasks.
+1. Preemptive : Preemptive scheduling is used when a process switches from running state to 
+ready state or from waiting state to ready state.
+2. Non-preemptive Scheduling is used when a process terminates, or a process switches from running to waiting state.
+
+4. Types of process scheduling?
+->  First Come First Serve (FCFS), 2) Shortest-Job-First (SJF) Scheduling 3) Shortest Remaining Time 
+    4) Priority Scheduling 5) Round Robin Scheduling 6) Multilevel Queue Scheduling
+
+5. Types of OS?
+-> Batch operating system, multitasking OS, multiprocessing OS, Real Time OS, Distributed OS, Mobile OS
+
+6. Loader
+-> In computer systems a loader is the part of an operating system that is responsible for loading programs and libraries.
+
+7. Deadlock
+-> Deadlock is a situation that occurs in OS when any process enters a waiting state because another waiting process 
+is holding the demanded resource.
+
+8. Explain 'Compile and Go' Loader
+-> In this type of loader, the instruction is read line by line, its machine code is obtained and 
+it is directly put in the main memory at some known address.
+
+9. Linker
+-> Linker is a program in a system which helps to link a object modules of program into a single object file. 
+It performs the process of linking. Linker are also called link editors. Linking is process of collecting and 
+maintaining piece of code and data into a single file.
+
+10. Deadlock
+-> Deadlock is a situation that occurs in OS when any process enters a waiting state because another waiting 
+process is holding the demanded resource
+
+11. FLEX and YACC
+-> Fast Lexical analyzer generator, Yet another compiler compiler (provides a tool to produce parser)
+
+12. 
+
+
+
+
+
+
+
+
+
+
+
+
+
